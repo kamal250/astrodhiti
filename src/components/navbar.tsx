@@ -28,7 +28,7 @@ const Navbar = () => {
             Services
           </a>
           <a href="/contact" className={linkStyle}>
-            Contact Us
+            Contact Me
           </a>
         </nav>
       )}
@@ -73,7 +73,7 @@ const Navbar = () => {
             Services
           </a>
           <a href="/contact" className={linkStyle}>
-            Contact Us
+            Contact Me
           </a>
         </motion.nav>
       )}
