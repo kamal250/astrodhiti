@@ -1,0 +1,75 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+
+const services = [
+	{
+		title: 'Kundli Analysis',
+		text: 'Comprehensive Kundli analysis to provide insights into your personality, life path, and potential.'
+	},
+	{
+		title: 'Numerology',
+		text: 'Personalized numerology services using your birth date and name for deeper self-understanding.'
+	},
+	{
+		title: 'Vastu Consultation',
+		text: 'Harmonize your living and working spaces with Vastu principles for prosperity and balance.'
+	},
+	{
+		title: 'Name Numerology',
+		text: 'Discover the energetic vibrations of your name and how they impact your destiny.'
+	},
+	{
+		title: 'Dasha Analysis',
+		text: 'Using Vedic astrology principles to analyze your Dasha system and reveal significant life events.'
+	},
+	{
+		title: 'Sade Sati Guidance',
+		text: 'Navigate your Sade Sati with greater awareness and understanding through personalized analysis.'
+	},
+]
+---
+
+
+<MainLayout title = 'Astrodhiti - Services'>
+
+  <!-- Banner Section -->
+
+  <section class="w-full bg-services h-[50vh] flex justify-center items-end">
+    <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+      <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-dm capitalize text-primary-200 ">Services</h1>
+      <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / Services </p>
+    </div>
+  </section>
+
+  	<!-- Services Section -->
+
+	<section class="lg:max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 lg:gap-y-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] justify-between ">
+		{
+			services.map((service) => {
+				return (
+					<div class="w-full col-span-1 max-w-[358px] mx-auto flex rounded-[30px] hover:bg-primary-300 px-5 py-[83px] flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+						
+					</div>
+				)
+			})
+		}
+	</section>
+
+</MainLayout>
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>
