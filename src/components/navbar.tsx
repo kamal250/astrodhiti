@@ -22,7 +22,7 @@ const Navbar = () => {
             Home
           </a>
           <a href="/about" className={linkStyle}>
-            About Us
+            About Me
           </a>
           <a href="/services" className={linkStyle}>
             Services
@@ -67,7 +67,7 @@ const Navbar = () => {
             Home
           </a>
           <a href="/about" className={linkStyle}>
-            About Us
+            About Me
           </a>
           <a href="/services" className={linkStyle}>
             Services

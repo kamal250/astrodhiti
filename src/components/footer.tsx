@@ -41,7 +41,7 @@ const Footer = () => {
               href="/about"
               className="tracking-tight text-base lg:text-[22px] lg:leading-[33px] font-jost text-text-gray"
             >
-              About Us
+              About Me
             </a>
             <a
               href="/services"
