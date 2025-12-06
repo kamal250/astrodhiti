@@ -66,10 +66,7 @@ const Footer = () => {
               Kundli Analysis
             </p>
             <p className="tracking-tight text-base lg:text-[22px] lg:leading-[33px] font-jost text-text-gray">
-              Numerology
-            </p>
-            <p className="tracking-tight text-base lg:text-[22px] lg:leading-[33px] font-jost text-text-gray">
-              Vastu Shastra
+              Dasha Analysis
             </p>
             <p className="tracking-tight text-base lg:text-[22px] lg:leading-[33px] font-jost text-text-gray">
               Name Numerology
