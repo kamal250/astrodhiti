@@ -6,7 +6,15 @@ export interface LayoutProps {
   title : string 
 }
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 const { title } = Astro.props as LayoutProps
+const googleTag = import.meta.env.GOOGLETAG;
 ---
 
 
@@ -23,6 +31,15 @@ const { title } = Astro.props as LayoutProps
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <title>{title}</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleTag}`}></script>
+    <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', googleTag);
+    </script>
   </head>
   <body>
     <main class='bg-main bg-no-repeat bg-cover bg-center'>
