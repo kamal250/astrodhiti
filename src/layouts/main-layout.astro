@@ -33,13 +33,12 @@ const googleTag = import.meta.env.GOOGLETAG;
     <title>{title}</title>
     <!-- Google tag (gtag.js) -->
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleTag}`}></script>
-    <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', googleTag);
-    </script>
+    <script is:inline set:html={`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${googleTag}');
+`}></script>
   </head>
   <body>
     <main class='bg-main bg-no-repeat bg-cover bg-center'>
